@@ -1,0 +1,4 @@
+node_modules/*
+node_modules
+Pulumi.*.yaml
+IMG_5360.jpg

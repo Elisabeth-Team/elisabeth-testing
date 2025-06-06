@@ -1,0 +1,6 @@
+name: pulumi-self-hosted-testing
+description: Let's make some stuff
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
