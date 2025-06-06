@@ -1,5 +1,7 @@
 name: pulumi-self-hosted-testing
 description: Let's make some stuff
+config:
+  pulumi-self-hosted-testing:region: us-east-1
 runtime:
   name: nodejs
   options:
