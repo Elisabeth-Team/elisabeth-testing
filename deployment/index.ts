@@ -10,16 +10,19 @@ const bucket = new aws.s3.Bucket("my-bucket", {
   },
 });
 
+const imagePath = pulumiConfig.get("IMAGE_PATH");
 // Upload the image to the bucket
-const image = new aws.s3.BucketObject("image.jpg", {
-  bucket: bucket.id,
-  source: new pulumi.asset.FileAsset(pulumiConfig.get("IMAGE_PATH") ?? ""), // Update this path
-});
+if (imagePath) {
+  const image = new aws.s3.BucketObject("image.jpg", {
+    bucket: bucket.id,
+    source: new pulumi.asset.FileAsset(imagePath), // Update this path
+  });
+}
 
 // Upload the index.html to the bucket
 const indexHtml = new aws.s3.BucketObject("index.html", {
   bucket: bucket.id,
-  content: `<html><body><img src="image.jpg" /></body></html>`,
+  content: `<html><head>Hi, Check this out</head><body><img src="image.jpg" /></body></html>`,
   contentType: "text/html",
 });
 
