@@ -2,6 +2,8 @@ name: pulumi-self-hosted-testing
 description: Let's make some stuff
 config:
   aws:region: us-east-1
+  MY_IP: 71.34.12.166
+  IMAGE_PATH: Leaning-Tower-of-Pisa-Italy.jpg
 runtime:
   name: nodejs
   options:
