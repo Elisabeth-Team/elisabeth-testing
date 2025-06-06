@@ -1,12 +1,12 @@
 {
-    "name": "pulumi-self-hosted-testing",
-    "main": "index.ts",
-    "devDependencies": {
-        "@types/node": "^18",
-        "typescript": "^5.0.0"
-    },
-    "dependencies": {
-        "@pulumi/aws": "^6.82.1",
-        "@pulumi/pulumi": "^3.113.0"
-    }
+  "name": "pulumi-self-hosted-testing",
+  "main": "deployment/index.ts",
+  "devDependencies": {
+    "@types/node": "^18",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@pulumi/aws": "^6.82.1",
+    "@pulumi/pulumi": "^3.113.0"
+  }
 }
