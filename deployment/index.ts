@@ -13,7 +13,7 @@ const bucket = new aws.s3.Bucket("my-bucket", {
 const imagePath = pulumiConfig.get("IMAGE_PATH");
 // Upload the image to the bucket
 if (imagePath) {
-  const image = new aws.s3.BucketObject("image.jpg", {
+  const image = new aws.s3.BucketObject("image2.jpg", {
     bucket: bucket.id,
     source: new pulumi.asset.FileAsset(imagePath), // Update this path
   });
@@ -22,7 +22,7 @@ if (imagePath) {
 // Upload the index.html to the bucket
 const indexHtml = new aws.s3.BucketObject("index.html", {
   bucket: bucket.id,
-  content: `<html><header>Hi, Check this out</header><body><img src="image.jpg" /></body></html>`,
+  content: `<html><header>Hi, Check this out</header><body><img src="image2.jpg" /></body></html>`,
   contentType: "text/html",
 });
 
