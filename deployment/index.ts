@@ -22,7 +22,7 @@ if (imagePath) {
 // Upload the index.html to the bucket
 const indexHtml = new aws.s3.BucketObject("index1.html", {
   bucket: bucket.id,
-  content: `<html><header>Hi, Check these out</header><body><img src="image.jpg" /></body></html>`,
+  content: `<html><header>, Check these out</header><body><img src="image.jpg" /></body></html>`,
   contentType: "text/html",
 });
 
